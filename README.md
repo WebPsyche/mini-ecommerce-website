@@ -29,6 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # mini-ecommerce-website
 #100dayofcodechallenge,  I will be building a mini e-commerce website using the Angular framework 
->>>>>>> 0a20bec11f1ed4c5a3671c957c63909a1fcd1abe
-[contact @WebPsyche](davidans2019@gmail.com)
+## Author Info
+[CONTACT @WebPsyche](davidans2019@gmail.com)
 `fork this repo`
