@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ECommeerceWebsite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# mini-ecommerce-website
+#100dayofcodechallenge,  I will be building a mini e-commerce website using the Angular framework 
+>>>>>>> 0a20bec11f1ed4c5a3671c957c63909a1fcd1abe
