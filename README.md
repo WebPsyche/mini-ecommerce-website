@@ -27,8 +27,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 =======
-# mini-ecommerce-website
-#100dayofcodechallenge,  I will be building a mini e-commerce website using the Angular framework 
+
 ## Author Info
 [CONTACT @WebPsyche](davidans2019@gmail.com)
 `fork this repo`
+
+# mini-ecommerce-website
+#100dayofcodechallenge,  I will be building a mini e-commerce website using the Angular framework 
