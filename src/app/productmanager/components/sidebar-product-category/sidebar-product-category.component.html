@@ -1,1 +1,31 @@
-<p>sidebar-product-category works!</p>
+<mat-sidenav-container class="app-sidebar-container" autosize>
+  <mat-sidenav #sidenav class="app-sidebar mat-elevation-z10"
+   mode="over" opened="true">
+    <mat-toolbar color="primary">Category</mat-toolbar>
+    <mat-list>
+      <mat-list-item >Shoes</mat-list-item>
+      <mat-list-item>Suites</mat-list-item>
+      <mat-list-item>Men's wear</mat-list-item> 
+      <mat-list-item>Jewellries</mat-list-item>
+      <mat-list-item>Makeups</mat-list-item>
+      <mat-list-item>Women's wear</mat-list-item>
+      <mat-list-item>Bikinis</mat-list-item>
+      <mat-list-item>Gowns</mat-list-item>
+      <mat-list-item>Accessories</mat-list-item>
+      </mat-list>
+   
+  </mat-sidenav>
+
+  <div class="app-sidebar-content">
+    <router-outlet></router-outlet>
+    <button type="button"  class="button" mat-button (click)="sidenav.toggle()">
+     <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+</mat-sidenav-container>
+
+
+  
+  
+  
