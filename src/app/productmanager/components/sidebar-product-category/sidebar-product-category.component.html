@@ -1,26 +1,41 @@
 <mat-sidenav-container class="app-sidebar-container" autosize>
-  <mat-sidenav #sidenav class="app-sidebar mat-elevation-z10"
-   mode="over" opened="true">
-    <mat-toolbar color="primary">Category</mat-toolbar>
-    <mat-list>
-      <mat-list-item >Shoes</mat-list-item>
-      <mat-list-item>Suites</mat-list-item>
-      <mat-list-item>Men's wear</mat-list-item> 
-      <mat-list-item>Jewellries</mat-list-item>
-      <mat-list-item>Makeups</mat-list-item>
-      <mat-list-item>Women's wear</mat-list-item>
-      <mat-list-item>Bikinis</mat-list-item>
-      <mat-list-item>Gowns</mat-list-item>
-      <mat-list-item>Accessories</mat-list-item>
-      </mat-list>
-   
+  <mat-sidenav class="app-sidebar mat-elevation-z10" #sidenav
+   mode="over" opened = {{Sidebar}} >
+    <mat-toolbar color="accent">Category</mat-toolbar>
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle value="Men">Male</mat-button-toggle>
+      <mat-button-toggle value="All" selected >All</mat-button-toggle>
+      <mat-button-toggle value="Women">Female</mat-button-toggle>
+      <mat-button-toggle value="home" routerLink="" matTooltip="Home"><mat-icon>home</mat-icon></mat-button-toggle>
+    </mat-button-toggle-group>
+    
+    <mat-action-list class="mat-action-list">
+      <button mat-list-item  *ngFor="let Category of category"  routerLink={{Category}}  (click)="sidenav.toggle()"> {{Category}} </button>
+     
+    </mat-action-list>
+     
+  
   </mat-sidenav>
 
   <div class="app-sidebar-content">
+    
+    <mat-toolbar color="accent" class="toolbar">
+      <button mat-icon-button class="example-icon" aria-label=" icon-button with menu icon">
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <span>Fashion Hub</span>
+      <span class="spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label=" icon-button with heart icon">
+        <mat-icon>add_shopping_cart</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label=" icon-button with facebook icon">
+        <mat-icon>facebook</mat-icon>
+      </button>
+      
+    </mat-toolbar>
+    
     <router-outlet></router-outlet>
-    <button type="button"  class="button" mat-button (click)="sidenav.toggle()">
-     <mat-icon>menu</mat-icon>
-    </button>
+    
   </div>
 
 </mat-sidenav-container>

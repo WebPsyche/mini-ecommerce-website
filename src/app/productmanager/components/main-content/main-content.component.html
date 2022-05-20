@@ -1,2 +1,59 @@
-<img src="uiTemplates\Artboard1fahionHUBLOGO.png"/>
-<mat-toolbar color="primary">welcome</mat-toolbar>
+
+<!img src="./assets/uiTemplates/Artboard1fahionHUBLOGO.png" width="100%" alt="pics">
+
+
+<div class="headerProducts" matRipple matRippleColor="color" (click)="products.toggleMain()">
+<mat-card class="products mat-elevation-z5" *ngFor='let product of products' (click)="products.toggleMain()">
+  <mat-card-title-group>
+    <mat-card-title class="title">{{product.productName}}</mat-card-title>
+    <mat-card-subtitle class="subtitle">{{product.price|currency}}</mat-card-subtitle>
+    <button mat-icon-button  aria-label="Example icon-button with a menu"  class="mainButton" (click)="product.toggleMain()" matTooltip="View">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <img mat-card-md-image src={{product.imageUrl}} class="productsImg" />
+  </mat-card-title-group>
+       
+  <div #showmains *ngIf = "product.showMain" class="viewMainBackdrop"  (click)="product.toggleMain()"></div>
+  <mat-card  *ngIf = "product.showMain" class="viewMain mat-elevation-z10">
+    <div>
+    <img mat-card-xl-image src={{product.imageUrl}} class="productsImg"  />
+    <mat-card-title class="title">{{product.productName}}</mat-card-title>
+    <mat-card-subtitle class="subtitle">{{product.price|currency: 'NGN'}}</mat-card-subtitle>
+    <mat-divider [vertical]="true" [inset]="true"></mat-divider>
+   </div>
+    <div>
+      <mat-tab-group animationDuration="500ms"> 
+        <mat-tab label="Product Description"> {{product.Description}} </mat-tab>
+        <mat-tab label="Add to cart" > 
+          <mat-form-field appearance="fill" style="display:flex; align-items:flex-start; flex-wrap: column wrap;">
+            <mat-label>Input</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Quantity</mat-label>
+            <mat-select>
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+          <button mat-mini-fab color="accent" aria-label="Example icon button with a shooping cart icon">
+            <mat-icon>add_shopping_cart</mat-icon>
+          </button>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+    
+    
+    </mat-card>
+ 
+  
+  
+ 
+ 
+  
+  
+  
+</mat-card>
+</div>
+

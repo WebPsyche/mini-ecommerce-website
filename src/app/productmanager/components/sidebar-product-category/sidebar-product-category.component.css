@@ -15,6 +15,13 @@
     padding:0;
   }
 .button{
-    position: absolute;
+   
+}
+.toolbar{
+  display: flex;
+ 
+}
+.spacer{
+  flex:1 1 auto;
 }
   

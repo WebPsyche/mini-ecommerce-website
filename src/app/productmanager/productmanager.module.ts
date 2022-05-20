@@ -9,11 +9,16 @@ import { MaterialModule } from '../shared/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { HeaderBigComponent } from '../../assets/uiTemplates/header-big.component';
+import { ShoeCatergoryComponent } from './components/productCategories/shoe-catergory.component';
+import { SuiteComponent } from './components/productCategories/suite.component';
 
 const routes:Routes = [
   {path:'', component:ProductmanagerAppComponent,
       children:[
-        {path:'', component: MainContentComponent }
+        {path:'', component: MainContentComponent },
+        {path:'Shoes', component: ShoeCatergoryComponent},
+        {path:'Suites', component: SuiteComponent}
       ]
     },
       {path:'', redirectTo: '', pathMatch:'full'}
@@ -25,7 +30,11 @@ const routes:Routes = [
   declarations: [
     MainContentComponent,
     ProductmanagerAppComponent,
-    SidebarProductCategoryComponent
+    SidebarProductCategoryComponent,
+    HeaderBigComponent,
+    ShoeCatergoryComponent,
+    SuiteComponent,
+
   ],
   imports: [
     CommonModule,
